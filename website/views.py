@@ -7,8 +7,8 @@ def home(request):
     records = Record.objects.all()
 
     if request.method == 'POST':
-        username = request.POST['username']  # Use the actual field name
-        password = request.POST['password']  # Use the actual field name
+        username = request.POST['username']  
+        password = request.POST['password']  
 
         user = authenticate(request, username=username, password=password)
         if user is not None:
